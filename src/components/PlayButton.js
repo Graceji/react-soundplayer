@@ -13,8 +13,8 @@ class PlayButton extends Component {
 
     if (!playing) {
       soundCloudAudio && soundCloudAudio.play({
-
-      })
+        playlistIndex: soundCloudAudio._playlistIndex
+      });
     } else {
       soundCloudAudio && soundCloudAudio.pause();
     }
