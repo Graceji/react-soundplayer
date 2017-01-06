@@ -6,8 +6,10 @@
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "soundcloud-audio": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
