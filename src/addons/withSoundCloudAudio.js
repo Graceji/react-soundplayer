@@ -70,6 +70,7 @@ export default function withSoundCloudAudio (WrapppedComponent) {
       }
     }
 
+    // playing
     onAudioStarted() {
       const { soundCloudAudio } = this;
       const { onStartTrack } = this.props;
@@ -84,30 +85,43 @@ export default function withSoundCloudAudio (WrapppedComponent) {
       onStartTrack && onStartTrack(soundCloudAudio, soundCloudAudio.playing);
     }
 
+    // timeupdate
     getCurrentTime() {
-
+      this.setState({
+        currentTime: this.soundCloudAudio.audio.currentTime
+      });
     }
 
+    // loadedmetadata
     getDuration() {
-
+      this.setState({
+        duration: this.soundCloudAudio.audio.duration
+      });
     }
 
+    // seeking
     onSeekingTrack() {
-
+      this.setState({
+        seeking: true
+      });
     }
 
+    // seeked
     onSeekedTrack() {
 
     }
 
+    // pause
     onAudioPaused() {
 
     }
 
+    // ended
     onAudioEnded() {
 
     }
 
+    // volumechange
     onVolumeChange() {
 
     }

@@ -21,4 +21,12 @@ export function stopAllOther(playing) {
 
 export function addToPlayedStore(soundCloudAudio) {
   let isPresent = false;
+  each(_playedAudios, _soundCloudAudio => {
+    isPresent = true;
+    return true;
+  });
+
+  if (!isPresent) {
+    _playedAudios.push(soundCloudAudio);
+  }
 }
